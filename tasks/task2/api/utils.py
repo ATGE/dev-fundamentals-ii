@@ -3,7 +3,7 @@ utils
 """
 def get_dict_by_key_value_from_list(key,value, array):
     """
-    get_dict_by_key_value_from_list --> get dict by ke value from list
+    get_dict_by_key_value_from_list --> get dict by key value from list
     Args:
         key: a key to lookup a value
         value: a value to lookup
