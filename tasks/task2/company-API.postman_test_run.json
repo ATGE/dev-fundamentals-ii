@@ -1,0 +1,238 @@
+{
+	"id": "f2b7d677-95df-4a54-8bda-5461321bdf83",
+	"name": "company-API",
+	"timestamp": "2021-08-29T23:13:07.390Z",
+	"collection_id": "0-e274ac1a-e27e-4bd5-a83f-c36e24b96372",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 0,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "84ee4282-bd6a-4a39-a1e0-8caf1d222957",
+			"name": "delete by id",
+			"url": "http://172.27.186.170:5000/api/v1/driver/0",
+			"time": 14,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				14
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "cd39689e-761a-4516-bd1c-455810a8bb50",
+			"name": "save driver",
+			"url": "http://172.27.186.170:5000/api/v1/driver",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				4
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "713b3a01-b6ad-4097-a6c8-8db99e8575b9",
+			"name": "get truck info by driver id ",
+			"url": "http://172.27.186.170:5000/api/v1/driver/1/truck",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				4
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "818cdeef-8a03-4a56-a24d-430a14b9db09",
+			"name": "get driver by id",
+			"url": "http://172.27.186.170:5000/api/v1/driver/1",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				4
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "48d8d0d6-4c5f-4874-a864-5ba3f6ff73e7",
+			"name": "get all driver",
+			"url": "http://172.27.186.170:5000/api/v1/driver",
+			"time": 16,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				16
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "8f160415-6503-4605-97b0-60000c179b03",
+			"name": "get truck info by driver name",
+			"url": "http://172.27.186.170:5000/api/v1/driver/Jon/truck",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				4
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "03bbfe00-a94b-4736-bec2-b9a873eb806e",
+			"name": "delete by id",
+			"url": "http://172.27.186.170:5000/api/v1/trucks/0",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				4
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "d81cc1c6-2b45-4b1d-bfc5-83a394c2aadc",
+			"name": "save truck",
+			"url": "http://172.27.186.170:5000/api/v1/trucks",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				5
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "3110d305-b4dc-4384-97f3-bda2c6ffe2b5",
+			"name": "get truck by id",
+			"url": "http://172.27.186.170:5000/api/v1/trucks/1",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				6
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "61ea1c54-b18e-4d9c-9421-ffc8fa4e4a39",
+			"name": "get all trucks",
+			"url": "http://172.27.186.170:5000/api/v1/trucks",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				4
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 65,
+	"collection": {
+		"requests": [
+			{
+				"id": "84ee4282-bd6a-4a39-a1e0-8caf1d222957",
+				"method": "DELETE"
+			},
+			{
+				"id": "cd39689e-761a-4516-bd1c-455810a8bb50",
+				"method": "POST"
+			},
+			{
+				"id": "713b3a01-b6ad-4097-a6c8-8db99e8575b9",
+				"method": "GET"
+			},
+			{
+				"id": "818cdeef-8a03-4a56-a24d-430a14b9db09",
+				"method": "GET"
+			},
+			{
+				"id": "48d8d0d6-4c5f-4874-a864-5ba3f6ff73e7",
+				"method": "GET"
+			},
+			{
+				"id": "8f160415-6503-4605-97b0-60000c179b03",
+				"method": "GET"
+			},
+			{
+				"id": "03bbfe00-a94b-4736-bec2-b9a873eb806e",
+				"method": "DELETE"
+			},
+			{
+				"id": "d81cc1c6-2b45-4b1d-bfc5-83a394c2aadc",
+				"method": "POST"
+			},
+			{
+				"id": "3110d305-b4dc-4384-97f3-bda2c6ffe2b5",
+				"method": "GET"
+			},
+			{
+				"id": "61ea1c54-b18e-4d9c-9421-ffc8fa4e4a39",
+				"method": "GET"
+			}
+		]
+	}
+}
