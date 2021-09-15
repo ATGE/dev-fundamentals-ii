@@ -5,5 +5,5 @@ setuptools.setup(
     version="0.0.1",
     author="atge",
     description="an application to manage trucks",
-    requires_dist=['flask']
+    install_requires=['flask']
 )
