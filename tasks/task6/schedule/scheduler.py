@@ -5,7 +5,7 @@ from discord_plataform import DiscordPlataform
 from schedule import Schedule
 
 if __name__ == "__main__":
-    scheduler= Schedule(0,0,1)
+    scheduler= Schedule(seconds=1)
     scheduler.add_plataforms(SkypePlataform())
     scheduler.add_plataforms(SlackPlataform())
     scheduler.add_plataforms(EmailPlataform())

@@ -3,15 +3,19 @@ from sender import Sender
 from plataform import MessagePlataform
 
 class Schedule(Sender):
-    def __init__(self,hour=0,minute=0,second=0):
+    """
+    Class Schedule that allows to send/receive messages in a specific time
+    """
+    def __init__(self,hours=0,minutes=0,seconds=0):
         super().__init__()
-        self.hours = hour
-        self.minutes = minute
-        self.seconds = second
+        self.hours = hours
+        self.minutes = minutes
+        self.seconds = seconds
         self.period = 0
         self.plataforms = []
         self.message = 'test message'
         self.message_received = False
+        #  self.time_to_wait_in_seconds = 10 * 60
         self.time_to_wait_in_seconds = 1
 
     def set_time(self, hour, minute, second):

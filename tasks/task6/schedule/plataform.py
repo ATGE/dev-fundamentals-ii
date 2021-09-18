@@ -1,5 +1,8 @@
 from sender import Sender
 class MessagePlataform:
+    """
+    Class to receive a message from a Sender and is able to notify it.
+    """
 
     def set_sender(self, sender:Sender):
         self.__sender = sender
