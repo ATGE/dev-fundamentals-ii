@@ -9,6 +9,7 @@ class Schedule{
   - int seconds
   - float period_of_time
   - list<MessagePlataform> plataforms
+  - str message
   - bool message_received
 
   
@@ -20,6 +21,8 @@ class Schedule{
 abstract MessagePlataform {
   + receive_message(string message)
   + send_message(string message)
+  + notify_sender()
+  + set_sender()
 }
 
 class Slack{
