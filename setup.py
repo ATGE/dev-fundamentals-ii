@@ -1,9 +1,9 @@
 import setuptools
 
 setuptools.setup(
-    name="truck_delivery_pamy",
+    name="truck_delivery_atge",
     version="0.0.1",
-    author="pamy",
+    author="atge",
     description="an application to manage trucks",
     install_requires=['flask']
 )

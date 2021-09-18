@@ -1,5 +1,5 @@
 import pytest
-from truck_delivery_pamy.db_connector import DBConnector
+from truck_delivery_atge.db_connector import DBConnector
 
 
 @pytest.fixture

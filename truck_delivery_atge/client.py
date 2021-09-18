@@ -1,4 +1,4 @@
-from truck_delivery_pamy.person import Person
+from truck_delivery_atge.person import Person
 
 
 class Client(Person):
