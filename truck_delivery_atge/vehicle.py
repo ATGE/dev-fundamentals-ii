@@ -1,14 +1,13 @@
 from abc import ABCMeta, abstractmethod
 
 
-class Person(metaclass=ABCMeta):
-    """Class to define basic information of a person"""
+class Vehicle(metaclass=ABCMeta):
+    """Class to define basic information of a vehicle"""
 
-    def __init__(self, ci, name, email, cellphone):
+    def __init__(self, type, name):
+        self.type = type
         self.name = name
-        self.ci = ci
-        self.email = email
-        self.cellphone = cellphone
+  
 
     @abstractmethod
     def to_dict(self):
