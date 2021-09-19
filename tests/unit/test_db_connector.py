@@ -54,6 +54,6 @@ def test_get_all_mock(fixture_db_connector):
 def delete_by_id_mock(fixture_db_connector):
     id_test = "123"
     object_to_save = {"123": {"a": "a"}}
-    fixture_db_connector.save(id_test, object_to_save)
+    fixture_db_connector.save(id_test,object_to_save)
     result = fixture_db_connector.delete(id_test)
     assert result == 1
