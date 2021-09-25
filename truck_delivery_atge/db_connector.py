@@ -56,3 +56,7 @@ class DBConnector:
             list_objs = self.connection.mget(list_ids)
             list_objs = [json.loads(obj) for obj in list_objs]
         return list_objs
+
+    def delete_by_id(self, id):
+        return self.connection.delete(id)
+
