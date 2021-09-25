@@ -1,10 +1,24 @@
 import redis
 import json
-
-
+import threading
 class DBConnector:
+
+    _instance = None
+    _lock = threading.Lock()
+
+    _instance = None
+
     def __init__(self):
-        self.connection = self.get_connection()
+        raise RuntimeError('Call instance() instead')
+
+    @classmethod
+    def instance(cls):
+        if cls._instance is None:
+            cls._instance = cls.__new__(cls)
+            cls.connection = redis.Redis(host="localhost",
+                                          port=6379)
+        return cls._instance
+
 
     def __enter__(self):
         return self
@@ -12,14 +26,6 @@ class DBConnector:
     def __exit__(self, *exc):
         # close database connection
         pass
-
-    def get_connection(self):
-        if hasattr(self, 'connection') and self.connection:
-            return self.connection
-        else:
-            self.connection = redis.Redis(host="localhost",
-                                          port=6379)
-            return self.connection
 
     def save(self, id_save, object_to_save):
         encode_data = json.dumps(object_to_save)
