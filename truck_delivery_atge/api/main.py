@@ -7,10 +7,12 @@ from flask import (
 )
 
 from truck_delivery_atge.api.views.driver_routes import driver_app
+from truck_delivery_atge.api.views.client_routes import client_app
 from truck_delivery_atge.shared_core.const import API_NAME
 
 app = Flask(__name__)
 app.register_blueprint(driver_app)
+app.register_blueprint(client_app)
 
 
 @app.route("/", methods=["GET"])
@@ -19,6 +21,7 @@ def health_check():
     health check
     """
     return f"Transportation company API: {API_NAME}"
+
 
 @app.errorhandler(404)
 def resource_not_found(_error):

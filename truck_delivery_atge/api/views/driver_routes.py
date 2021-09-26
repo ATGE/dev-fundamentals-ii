@@ -1,6 +1,4 @@
 """Driver routes Blueprint"""
-import json
-
 from flask import (
     Blueprint,
     jsonify,
