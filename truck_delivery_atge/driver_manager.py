@@ -2,8 +2,7 @@
 from truck_delivery_atge.content_manager import ContentManager
 from truck_delivery_atge.db_connector import DBConnector
 from truck_delivery_atge.driver import Driver
-
-from truck_delivery_atge.util import constants
+from truck_delivery_atge.shared_core import constants
 
 
 DRIVER_ID = f'{constants.UUID}-{constants.DRIVER}'

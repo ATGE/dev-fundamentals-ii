@@ -2,7 +2,7 @@
 from truck_delivery_atge.content_manager import ContentManager
 from truck_delivery_atge.db_connector import DBConnector
 from truck_delivery_atge.client import Client
-from truck_delivery_atge.util import constants
+from truck_delivery_atge.shared_core import constants
 
 
 CLIENTE_ID = f'{constants.UUID}-{constants.CLIENT}'

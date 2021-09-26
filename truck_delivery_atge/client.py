@@ -30,5 +30,5 @@ class Client(Person):
         try:
             entity = Client(**valid_properties)
         except Exception as e:
-            raise Exception('Could not create entity \n' + repr(e))
+            raise Exception('Could not create Client \n' + repr(e))
         return entity
