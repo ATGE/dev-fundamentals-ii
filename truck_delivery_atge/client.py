@@ -13,4 +13,22 @@ class Client(Person):
         dict_init.pop("nit", None)
         return dict_init
 
+    def entity_from_dict(data_dict):
+        valid_properties ={
+        'ci': '',
+        'name' :'',
+        'email' : '',
+        'cellphone': '',
+        'address' : '',
+        'nit' : '',
+        'contract_number' : '',
+        }
 
+        for cls_property in valid_properties.keys():
+            if cls_property in data_dict:
+                valid_properties[cls_property] = data_dict[cls_property]
+        try:
+            entity = Client(**valid_properties)
+        except Exception as e:
+            raise Exception('Could not create entity \n' + repr(e))
+        return entity
