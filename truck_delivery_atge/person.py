@@ -4,7 +4,7 @@ from abc import ABCMeta, abstractmethod
 class Person(metaclass=ABCMeta):
     """Class to define basic information of a person"""
 
-    def __init__(self, ci='', name='', email='', cellphone='', address = ''):
+    def __init__(self, ci , name, email='', cellphone='', address = ''):
         self.name = name
         self.ci = ci
         self.email = email
