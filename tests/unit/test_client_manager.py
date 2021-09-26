@@ -19,9 +19,10 @@ def db_connector(mocker) -> DBConnector:
 
 def get_client_mock():
     ci_test ='123456ci'
+    name ='testerson'
     client =Client(
-        ci = ci_test, 
-        name ='testerson',
+        ci_test, 
+        name,
         email = 'test@mail.com',
         cellphone = '+591',
         address = 'test',
