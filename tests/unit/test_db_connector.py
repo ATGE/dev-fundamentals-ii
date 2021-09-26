@@ -41,7 +41,7 @@ def test_get_by_id_mock_as_context_manager(mocker):
     with DBConnectorRedis.instance() as db_connector:
         db_connector.save(id_test, object_to_save)
         result = db_connector.get_by_id(id_test)
-    assert result
+    assert result == object_to_save
 
 def test_get_all_mock(fixture_db_connector):
     id_test = "123"
