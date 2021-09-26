@@ -2,8 +2,10 @@
 from truck_delivery_atge.content_manager import ContentManager
 from truck_delivery_atge.db_connector import DBConnector
 from truck_delivery_atge.client import Client
+from truck_delivery_atge.util import constants
 
-CLIENTE_ID = "UUI-client"
+
+CLIENTE_ID = f'{constants.UUID}-{constants.CLIENT}'
 
 class ClientManager(ContentManager):
     def __init__(self,db_connector:DBConnector):
@@ -23,4 +25,4 @@ class ClientManager(ContentManager):
         return get_result
 
     def delete(self, ci):
-        return self.db_connector.delete_by_id(ci)
+        return self.db_connector.delete_by_id(f'{CLIENTE_ID}-{ci}')
