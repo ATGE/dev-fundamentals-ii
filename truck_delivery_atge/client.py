@@ -3,7 +3,8 @@ from truck_delivery_atge.person import Person
 
 class Client(Person):
     """ Class representing a Client """
-    def __init__(self,ci, name, email='', cellphone='', address = '', nit='', contract_number=''):
+
+    def __init__(self, ci, name, email='', cellphone='', address='', nit='', contract_number=''):
         super(Client, self).__init__(ci, name, email, cellphone, address)
         self.nit = nit
         self.contract_number = contract_number
@@ -14,14 +15,14 @@ class Client(Person):
         return dict_init
 
     def entity_from_dict(data_dict):
-        valid_properties ={
-        'ci': '',
-        'name' :'',
-        'email' : '',
-        'cellphone': '',
-        'address' : '',
-        'nit' : '',
-        'contract_number' : '',
+        valid_properties = {
+            'ci': '',
+            'name': '',
+            'email': '',
+            'cellphone': '',
+            'address': '',
+            'nit': '',
+            'contract_number': '',
         }
 
         for cls_property in valid_properties.keys():

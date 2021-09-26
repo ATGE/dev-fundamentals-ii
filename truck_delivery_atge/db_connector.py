@@ -1,4 +1,6 @@
 from abc import ABCMeta, abstractmethod
+
+
 class DBConnector(metaclass=ABCMeta):
 
     def __init__(self):
@@ -12,7 +14,7 @@ class DBConnector(metaclass=ABCMeta):
     @abstractmethod
     def save(self, id_save, object_to_save):
         pass
-    
+
     @abstractmethod
     def get_by_id(self, id):
         pass
@@ -20,7 +22,7 @@ class DBConnector(metaclass=ABCMeta):
     @abstractmethod
     def get_all(self):
         pass
-    
+
     @abstractmethod
     def get_by_pattern(self, pattern):
         pass
@@ -28,4 +30,3 @@ class DBConnector(metaclass=ABCMeta):
     @abstractmethod
     def delete_by_id(self, id):
         pass
-

@@ -2,24 +2,24 @@ from truck_delivery_atge.db_connector import DBConnector
 import redis
 import json
 import threading
-class DBConnectorRedis(DBConnector):
 
+
+class DBConnectorRedis(DBConnector):
     _instance = None
     _lock = threading.Lock()
 
     _instance = None
 
     def __init__(self):
-         super(DBConnectorRedis, self).__init__()
+        super(DBConnectorRedis, self).__init__()
 
     @classmethod
     def instance(cls):
         if cls._instance is None:
             cls._instance = cls.__new__(cls)
             cls.connection = redis.Redis(host="localhost",
-                                          port=6379)
+                                         port=6379)
         return cls._instance
-
 
     def __enter__(self):
         return self
@@ -60,4 +60,3 @@ class DBConnectorRedis(DBConnector):
 
     def delete_by_id(self, id):
         return self.connection.delete(id)
-

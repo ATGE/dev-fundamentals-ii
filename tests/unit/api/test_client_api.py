@@ -65,7 +65,7 @@ def test_get_all_clients(app_client):
 
 def test_save_client(app_client):
     _, client_mock = get_client_mock()
-    rv = app_client.post(f"{API_NAME}/client", json=app_client.to_dict())
+    rv = app_client.post(f"{API_NAME}/client", json=client_mock.to_dict())
     assert 200 == rv.status_code
 
 
