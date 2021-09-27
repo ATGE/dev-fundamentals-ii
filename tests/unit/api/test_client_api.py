@@ -54,6 +54,14 @@ def test_get_client(app_client):
     assert 200 == rv.status_code
 
 
+def test_get_client_not_found(app_client,mocker):
+    client_id = 123456
+    manager_route = 'truck_delivery_atge.client_manager.ClientManager.'
+    mocker.patch(manager_route + 'get_document').return_value = None
+    rv = app_client.get(f"{API_NAME}/client/{client_id}")
+    assert 404 == rv.status_code
+
+
 def test_get_all_clients(app_client):
     _, client_expected = get_client_mock()
     rv = app_client.get(f"{API_NAME}/client")

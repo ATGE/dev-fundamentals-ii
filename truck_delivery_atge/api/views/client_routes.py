@@ -1,10 +1,11 @@
-"""client routes Blueprint"""
+"""Client routes Blueprint"""
 import json
 
 from flask import (
     Blueprint,
     jsonify,
-    request
+    request,
+    abort,
 )
 
 from truck_delivery_atge.shared_core.const import API_NAME as API_NAME
@@ -39,6 +40,8 @@ def get_client_by_id(client_id):
         client(dict): a client
     """
     client = client_manager.get_document(client_id)
+    if not client:
+        abort(404, {"message": "The object not found"})
     return jsonify(client.to_dict())
 
 
@@ -51,8 +54,9 @@ def save_client():
     """
     client_dict = request.json
     client = Client.entity_from_dict(client_dict)
-    client_manager.save_document(client)
-
+    save_result = client_manager.save_document(client)
+    if not save_result:
+        abort(422)
     return jsonify({"message": "The object was saved successfully"})
 
 
@@ -64,5 +68,8 @@ def delete_client(client_id):
          client_id(int): a client identifier
     Return:
     """
-    result_delete = client_manager.delete(client_id)
+    delete_result = client_manager.delete(client_id)
+    if not delete_result:
+        abort(404, {"message": "The object not found"})
+    return jsonify({"message": "The object was saved successfully"})
     return jsonify({"message": "The object was deleted successfully"})
