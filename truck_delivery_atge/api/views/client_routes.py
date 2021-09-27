@@ -71,5 +71,4 @@ def delete_client(client_id):
     delete_result = client_manager.delete(client_id)
     if not delete_result:
         abort(404, {"message": "The object not found"})
-    return jsonify({"message": "The object was saved successfully"})
     return jsonify({"message": "The object was deleted successfully"})
