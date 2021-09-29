@@ -3,16 +3,19 @@ on:
   push:
     branches:
       - master
+  pull_request:
+    branches: [ master ]
+
 jobs:
   test:
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
-        python-version: [ 3.8 , 3.9 ]
+        python-version: [ 3.8 , 3.9]
         os: [ ubuntu-18.04 ]
 
-   steps:
+    steps:
       - name: Checkout
         uses: actions/checkout@v2
 
@@ -28,4 +31,4 @@ jobs:
           pip install coveralls
 
       - name: Run tests
-        run: pytest tests/unit 
+        run: pytest tests/unit
