@@ -18,4 +18,9 @@ class Person(metaclass=ABCMeta):
         Arg:
         """
         pass
+    
+    @classmethod
+    def entity_from_dict(data_dict):
+        pass
+
 
