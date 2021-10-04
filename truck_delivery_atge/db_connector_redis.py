@@ -1,13 +1,17 @@
-from truck_delivery_atge.db_connector import DBConnector
 import redis
 import json
 import threading
 
+from truck_delivery_atge.shared_core import configuration
+from truck_delivery_atge.db_connector import DBConnector
+
 
 def _get_redis():
     try:
-        return redis.Redis(host="localhost",
-                           port=6379)
+        host = configuration.config_from_var('host')
+        port = int(configuration.config_from_var('port'))
+        return redis.Redis(host=host,
+                           port=port)
     except (TimeoutError, ConnectionError) as timeout_e:
         raise Exception("The DB is not available",
                         custom_param="string")
