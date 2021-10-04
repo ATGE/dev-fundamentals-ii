@@ -63,4 +63,4 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
           PYPI_REPO_URL: "https://test.pypi.org/legacy/"
-        run: npx semantic-release --debug --branches main
+        run: npx semantic-release --debug --branches master
