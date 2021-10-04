@@ -60,7 +60,7 @@ jobs:
       - name: Release
         if: github.event_name == 'push'
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.TRUCK_TOKEN }}
           PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
           PYPI_REPO_URL: "https://test.pypi.org/legacy/"
         run: npx semantic-release --debug --branches master
